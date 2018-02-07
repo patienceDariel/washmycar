@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">WashMyCar</string>
+    <string name="action_settings">Settings</string>
+    <string name="choose_wash_type">Choose the type of wash you would like</string>
+    <string name="choose_action_from_menu">What would you like to do?</string>
+    <string name="wash_my_car">Wash my car</string>
+    <string name="view_orders">View Orders</string>
+    <string name="view_payments">View Payments</string>
+    <string name="outside_only_wash">Outside only wash</string>
+    <string name="full_wash">Full wash</string>
+    <string name="title_activity_edit_car_info">EditCarInfoActivity</string>
+    <string name="enter_car_info">Enter Car Information</string>
+    <string name="enter_car_reg">Registration Number</string>
+    <string name="enter_car_manufacturer">Manufacturer</string>
+    <string name="enter_car_model">Model</string>
+    <string name="enter_car_color">Color</string>
+    <string name="enter_car_type">Type</string>
+    <string name="enter_car_owner_first_name">Owner First Name</string>
+    <string name="enter_car_owner_last_name">Owner First Name</string>
+    <string name="checkout_page_header">Thank you for choosing us to wash your car. Your order has been placed</string>
+    <string name="title_activity_choose_action_from_menu">ChooseActionFromMenuActivity</string>
+
+    <!--Spinner-->
+    <string-array name="car_type">
+        <item>Hatchback</item>
+        <item>SUV</item>
+    </string-array>
+
+    <!--Buttons-->
+    <string name="next">Next</string>
+    <string name="order">Order</string>
+</resources>
