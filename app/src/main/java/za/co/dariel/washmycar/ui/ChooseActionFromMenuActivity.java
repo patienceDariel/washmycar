@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 import za.co.dariel.washmycar.R;
 
@@ -17,7 +18,6 @@ public class ChooseActionFromMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose_action_from_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
 }
