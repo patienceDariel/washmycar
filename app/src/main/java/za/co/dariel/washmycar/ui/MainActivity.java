@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import za.co.dariel.washmycar.R;
 import za.co.dariel.washmycar.model.Car;
@@ -26,16 +28,38 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        onClickNextButton();
+        onClickBackButton();
 
+
+    }
+
+    private void onClickBackButton() {
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+
+    private void onClickNextButton() {
+        final RadioGroup radioGroup = findViewById(R.id.wash_type_radioGroup);
         Button nextButton = findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditCarInfoActivity.class);
-                startActivity(intent);
+
+                if (radioGroup.getCheckedRadioButtonId() == -1) {
+                    Toast.makeText(getApplicationContext(), R.string.error_select_wash_type, Toast.LENGTH_LONG).show();
+                } else {
+
+                    Intent intent = new Intent(getApplicationContext(), EditCarInfoActivity.class);
+                    startActivity(intent);
+                }
             }
         });
-
     }
 
     @Override
@@ -65,19 +89,17 @@ public class MainActivity extends AppCompatActivity {
         boolean isChecked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
-            case R.id.outside_wash_only :
-                if(isChecked) {
-                order.setOutsideWashOnly(Boolean.TRUE);
+            case R.id.outside_wash_only:
+                if (isChecked) {
+                    order.setOutsideWashOnly(Boolean.TRUE);
                 }
-
                 break;
 
-            case R.id.full_wash :
-                if(isChecked) {
+            case R.id.full_wash:
+                if (isChecked) {
                     order.setOutsideWashOnly(Boolean.FALSE);
+                    break;
                 }
-
-                break;
         }
     }
 }

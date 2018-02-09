@@ -28,6 +28,7 @@
         android:orientation="vertical">
 
         <RadioGroup
+            android:id="@+id/wash_type_radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -61,6 +62,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next"
+            android:layout_marginRight="@dimen/button_spacing"
+
+            />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
 
             />
     </LinearLayout>

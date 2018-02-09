@@ -29,4 +29,8 @@
     <!--Buttons-->
     <string name="next">Next</string>
     <string name="order">Order</string>
+    <string name="back">Back</string>
+
+    <!--Errors-->
+    <string name="error_select_wash_type">Please select the type of wash you want</string>
 </resources>
