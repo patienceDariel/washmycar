@@ -5,4 +5,5 @@
     <dimen name="header_text_margin_left">4dp</dimen>
     <dimen name="radio_button_text_size">24dp</dimen>
     <dimen name="radio_button_margin_bottom">24dp</dimen>
+    <dimen name="button_spacing">36dp</dimen>
 </resources>

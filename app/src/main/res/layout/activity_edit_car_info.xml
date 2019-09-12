@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="@string/enter_car_owner_last_name"/>
     <Button
+        android:id="@+id/orderButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/order"/>
